@@ -1,2 +1,2 @@
 # cli_mate
-Platform for projects to tackle climate change
+Platform frontend for projects to tackle climate change
