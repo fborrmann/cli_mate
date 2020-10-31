@@ -1,0 +1,8 @@
+.site-header {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+i {
+    margin: 5px;;
+}
