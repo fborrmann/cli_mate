@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-start-page',
@@ -8,12 +9,15 @@ import { Router } from '@angular/router';
 })
 export class StartPageComponent implements OnInit {
 
-  constructor( private router : Router ) { }
+  location: string;
+
+  constructor( private router : Router, private service: DataService ) { }
 
   ngOnInit(): void {
   }
 
   projects(): void {
+    this.service.location = this.location;
     this.router.navigateByUrl('/projects');
   }
 }

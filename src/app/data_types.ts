@@ -1,17 +1,20 @@
 export class Project {
     id: number;
     location: string;
-    time: Date;
+    date: string;
+    time: string;
     organisator: User;
     description: string;
     days: number;
     people: number;
+    image?: string;
 }
 
 export class User {
     id: number;
     name: string;
-    mail: string;
-    password: string;
-    projects: Project[];
+    mail?: string;
+    password?: string;
+    projects?: Project[];
+    webpage?: string;
 }
