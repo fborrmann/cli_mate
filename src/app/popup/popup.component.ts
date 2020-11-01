@@ -17,6 +17,7 @@ export class PopupComponent implements OnInit {
   }
 
   save(): void {
+    this.project.image = "/assets/default.PNG";
     this.event.emit(this.project);
   }
 

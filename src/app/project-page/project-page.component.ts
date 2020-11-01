@@ -10,6 +10,7 @@ import { projects } from '../example_projects';
 })
 export class ProjectPageComponent implements OnInit {
   location: string;
+  input: string;
   projects: Project[] = projects
 
   constructor(private service: DataService) { }
@@ -21,6 +22,10 @@ export class ProjectPageComponent implements OnInit {
   save(project: Project): void {
     if (!project.organisator) project.organisator=new User("Demo User");
     this.projects = [project].concat(this.projects)
+  }
+
+  filter(): void {
+    this.location = this.input;
   }
 
 }

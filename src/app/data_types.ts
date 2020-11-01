@@ -6,7 +6,7 @@ export class Project {
     organisator: User;
     description: string;
     days: number;
-    people: number;
+    people: any;
     image?: string;
 }
 
