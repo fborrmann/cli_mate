@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Project } from '../data_types';
+import { Project, User } from '../data_types';
 import { projects } from '../example_projects';
 
 @Component({
@@ -16,6 +16,11 @@ export class ProjectPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.location = this.service.location;
+  }
+
+  save(project: Project): void {
+    if (!project.organisator) project.organisator=new User("Demo User");
+    this.projects = [project].concat(this.projects)
   }
 
 }

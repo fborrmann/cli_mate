@@ -11,10 +11,14 @@ export class Project {
 }
 
 export class User {
-    id: number;
+    id?: number;
     name: string;
     mail?: string;
     password?: string;
     projects?: Project[];
     webpage?: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
 }
